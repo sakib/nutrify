@@ -32,9 +32,14 @@
 	
 	<script>
 		function calculate() {
+			
+			var h = parseFloat(height.value);
 			var w = parseFloat(waist.value);
+			var c = parseFloat(chest.value);
+			var p = parseFloat(hip.value);
 			alert(w*10);
 			output.innerHTML=w*10;
+			return array{w, 
 		}	
 	`	
 	</script>
@@ -49,19 +54,21 @@
 			<div id="mBox">
 				<div>
 					<center><br/>Measurements</center><br/>
-					<input type="radio" name="sex" value="male"><label style="font-size:15px">Male</label><br/>
-					<input type="radio" name="sex" value="female"><label style="font-size:15px">Female</label><br/>
-					Height:<input type="text" id="height" size="20" maxlength="20" style="padding-left:1px;"> <br/>
-					Waist: <input type="text" id="waist" size="20" maxlength="20" style="padding-left:1px;"> <br/>
-					Chest: <input type="text" id="chest" size="20" maxlength="20" style="padding-left:0px;"> <br/>
-					Hip:   <input type="text" id="hip" size="20" maxlength="20" style="padding-left:50px;"> <br/>
-					<button type="button" onclick="calculate()">Compile data!</button>
+					<form action="demo_form.asp" autocomplete="off" style="padding-left:20px">
+						<input type="radio" name="sex" value="male"><label style="font-size:15px">Male</label><br/>
+						<input type="radio" name="sex" value="female"><label style="font-size:15px">Female</label><br/>
+						Height:<input type="text" id="height" size="20" maxlength="20"> <br/>
+						Waist: <input type="text" id="waist" size="20" maxlength="20"> <br/>
+						Chest: <input type="text" id="chest" size="20" maxlength="20"> <br/>
+						Hip:   <input type="text" id="hip" size="20" maxlength="20"> <br/>
+						<button type="button" onclick="calculate()">Compile data!</button>
+					</form>
 				</div>
 				<div>
 					<center><br/>Attributes</center><br/>
-					<p id="output"></p> <br/>
-					 <br/>
-					 <br/>	
+					swag <br/>
+					swag <br/>
+					swag <br/>	
 				</div>
 			</div>
 			<div id="mBox">
