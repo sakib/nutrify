@@ -33,7 +33,9 @@
 		function calculate() {
 			var w = parseFloat(waist.value);
 			alert(w*10);
+			output.innerHTML=w*10;
 		}	
+	`	
 	</script>
 
 	<body>
@@ -56,9 +58,9 @@
 				</div>
 				<div>
 					<center><br/>Attributes</center><br/>
-					<input type="text" name="" size="20" maxlength="20"> <br/>
-					<input type="text" name="" size="20" maxlength="20"> <br/>
-					<input type="text" name="" size="20" maxlength="20"> <br/>	
+					<p id="output"></p> <br/>
+					 <br/>
+					 <br/>	
 				</div>
 			</div>
 			<div id="mBox">
