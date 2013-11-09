@@ -23,14 +23,14 @@
 		text-align: center;
 		margin-bottom: 50px;
 		height: 250px;
-		color: red;
+		color: #0080FF;
 		}
 	</style>
 
 	<title>Nutrify</title>
 	
 	<script>
-		function BMI() {
+		function calculate() {
 			var w = parseFloat(waist.value);
 			alert(w*10);
 		}	
@@ -52,7 +52,7 @@
 					<input type="text" id="waist" size="20" maxlength="20"> <br/>
 					<input type="text" id="hip" size="20" maxlength="20">	<br/>
 					<input type="text" id="chest" size="20" maxlength="20"> <br/>
-					<button type="button" onclick="BMI()">Compile data!</button>
+					<button type="button" onclick="calculate()">Compile data!</button>
 				</div>
 				<div>
 					<center><br/>Attributes</center><br/>
