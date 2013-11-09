@@ -1,4 +1,5 @@
 <html>
+	<script src="code.jquery.com/jquery-2.0.3.min.js"> </script>
 	<style>
 		h6 {
 		color: #43F399;
@@ -32,14 +33,16 @@
 	
 	<script>
 		function calculate() {
-			
+			var gender = true;
+			if (document.getElementById("male").checked=false) {
+				gender = false;
+			var a = parseFloat(age.value);
 			var h = parseFloat(height.value);
 			var w = parseFloat(waist.value);
 			var c = parseFloat(chest.value);
 			var p = parseFloat(hip.value);
-			alert(w*10);
-			output.innerHTML=w*10;
-			return array{w, 
+
+			return { "gender" : gender } ; 
 		}	
 	`	
 	</script>
@@ -57,6 +60,7 @@
 					<form action="demo_form.asp" autocomplete="off">
 						<input type="radio" name="sex" value="male"><label style="font-size:15px">Male</label><br/>
 						<input type="radio" name="sex" value="female"><label style="font-size:15px">Female</label><br/>
+						Age:   <input type="text" id="age" size="20" maxlength="20"> <br/>
 						Height:<input type="text" id="height" size="20" maxlength="20"> <br/>
 						Waist: <input type="text" id="waist" size="20" maxlength="20"> <br/>
 						Chest: <input type="text" id="chest" size="20" maxlength="20"> <br/>
