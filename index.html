@@ -25,14 +25,17 @@
 		height: 250px;
 		background-color: red;
 		}
+		#form {
+		font-size: 10px;
+		}
 	</style>
 
 	<title>Nutrify</title>
 	
 	<script>
 		function BMI() {
-			var wais = parseFloat(waist.value);
-			alert(wais * 10);
+			var w = parseFloat(waist.value);
+			alert(w*10);
 		}	
 	</script>
 
@@ -46,10 +49,10 @@
 			<div id="mBox">
 				<div>
 					<center><br/>Measurements</center><br/>
-					<form>
-						<input type="radio" font-size="10" name="sex" value="male">Male<br/>
-						<input type="radio" font-size="10" name="sex" value="female">Female<br/>
-					</form>
+					<div id="form">
+						<input type="radio" name="sex" value="male">Male<br/>
+						<input type="radio" name="sex" value="female">Female<br/>
+					</div>
 					<input type="text" id="height" size="20" maxlength="20"> <br/>
 					<input type="text" id="waist" size="20" maxlength="20"> <br/>
 					<input type="text" id="hip" size="20" maxlength="20">	<br/>
