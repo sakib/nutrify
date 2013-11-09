@@ -36,13 +36,13 @@
 			var gender = true;
 			if (document.getElementById("male").checked=false) {
 				gender = false;
-			var a = parseFloat(age.value);
+			var f = parseFloat(forearm.value);
 			var h = parseFloat(height.value);
 			var w = parseFloat(waist.value);
 			var t = parseFloat(weight.value);
 			var c = parseFloat(chest.value);
 			var p = parseFloat(hip.value);
-
+			var r = parseFloat(wrist.value);
 			return { "gender" : gender } ; 
 		}	
 	`	
@@ -67,6 +67,8 @@
 						Waist: <input type="text" id="waist" size="20" maxlength="20"> <br/>
 						Chest: <input type="text" id="chest" size="20" maxlength="20"> <br/>
 						Hip:   &nbsp<input type="text" id="hip" size="20" maxlength="20"> <br/>
+						Wrist: <input type="text" id="wrist" size="20" maxlength="20"> <br/>
+						Forearm:<input type="text" id="forearm" size="20" maxlength="20"> <br/>
 					</form>	
 					<button type="button" onclick="calculate()">Compile data!</button>
 				</div>
