@@ -99,7 +99,7 @@
 		var wt = parseFloat(weight.value);
 		var wt2 = parseFloat(weight2.value);
 		var level = document.getElementById('activity').value;
-		var y2 = parseFloat(year.value) - 2013;
+		var y2 = parseFloat(year.value);
 		var m2 = document.getElementById('month').value;
 		mTain.innerHTML = getmTain(gen, ag, wt, ht, level).toString();
 		dailyCal.innerHTML = getCal(wt, wt2, m2, y2, gen, ag, wt, ht, level).toString();
