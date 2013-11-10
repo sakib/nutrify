@@ -52,9 +52,7 @@
             }
         }
         function leanbm(gen, wt, wst) {
-		alert(wt);
-		alert(percent(gen, wt, wst));
-            return wt * (100 - percent(gen, wt, wst)/100);
+            return wt * (1 - (percent(gen, wt, wst)/100));
         }
         function calculate() {
             var gen;
