@@ -90,7 +90,6 @@
 		if (document.getElementById('r2'.checked)) {
 			gen = document.getElementById('r2').value;
 		}
-		alert(gen);
 		var ag = parseFloat(age.value);
 		var ht = parseFloat(height.value);
 		var wst = parseFloat(waist.value);
@@ -110,6 +109,7 @@
 		alert(gen); alert(ag); alert(wt); alert(ht); alert(level);
 		mTain.innerHTML = getmTain(gen, ag, wt, ht, level).toString();
 		dailyCal.innerHTML = getCal(wt, wt2, m2, y2, gen, ag, wt, ht, level).toString();
+		alert(mTain); alert(dailyCal);
 	}
 	</script>
 </head>
