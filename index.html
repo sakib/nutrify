@@ -88,7 +88,7 @@
 		} else {
 			gen = document.getElementById('r2').value;
 		}
-		var age = parseFloat(age.value);
+		var ag = parseFloat(age.value);
 		var ht = parseFloa(height.value);
 		var wst = parseFloat(waist.value);
 		var wt = parseFloat(weight.value);
@@ -104,8 +104,8 @@
 		for ( var i=0, j=months.value; i<j; i++ ) {
 			m2.push(months[i].value);
 		}
-		mTain.innerHTML = getmTain(gen, age, wt, ht, level).toString();
-		dailyCal.innerHTML = getCal(wt, wt2, m2, y2, gen, age, wt, ht, level).toString();
+		mTain.innerHTML = getmTain(gen, ag, wt, ht, level).toString();
+		dailyCal.innerHTML = getCal(wt, wt2, m2, y2, gen, ag, wt, ht, level).toString();
 	}
 	</script>
 </head>
