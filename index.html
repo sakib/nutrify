@@ -70,8 +70,44 @@
             bmrc.innerHTML = BMR(gen, ag, wt, ht).toString();
             prc.innerHTML = percent(gen, wt, wst).toString();
             lbm.innerHTML = leanbm(gen, wt, wst).toString();
-        }	
-		</script>
+        }
+	function getmTain(gen, age, wt, ht, level) {
+		return BMR(gen, age, wt, ht)*level;
+	}
+	function getCal(wt, wt2, m2, y2, gen, age, ht, level) {
+		var yearDiff = y2-2013;
+		var monthDiff = m2-11;
+		var dayDiff = (monthDiff*30) + (yearDiff*365);
+		var changeCal = (wt2-wt)*3500;
+		return (changeCal/dayDiff)+BMR(gen, age, wt, ht, level);
+	}
+	function calculate2() {
+		var gen;
+		if (document.getElementById('r1'.checked) {
+			gen = document.getElementById('r1').value;
+		} else {
+			gen = document.getElementById('r2').value;
+		}
+		var age = parseFloat(age.value);
+		var ht = parseFloa(height.value);
+		var wst = parseFloat(waist.value);
+		var wt = parseFloat(weight.value);
+		var wt2 = parseFloat(weight2.value);
+		var opts = document.getElementById('activity');
+		var level = [];
+		for ( var i=0; j=opts.length; i<j; i++ ) {
+			level.push(opts[i].value);
+		}
+		var y2 = parseFloat(year.value) - 2013;
+		var months = document.getElementById('month');
+		var m2 = [];
+		for ( var i=0; j=months.value; i<j; i++ ) {
+			m2.push(months[i].value);
+		}
+		mTain.innerHTML = getmTain(gen, age, wt, ht, level).toString();
+		dailyCal.innerHTML = getCal(wt, wt2, m2, y2, gen, age, wt, ht, level).toString();
+	}
+	</script>
 </head>
 <body>
     <p>
@@ -82,7 +118,7 @@
         <div id="mBox">
             <div>
                 <center>
-                    <br />
+                    <br/>
                     <b>Measurements</b></center>
                 <br />
                 <input type="radio" id="r1" name="sex" value="male"><label style="font-size: 15px">Male</label><br />
@@ -123,42 +159,42 @@
                     <b>Fitness Goals</b></center>
                 <br />
                 Enter your Activity Level<br />
-                <select>
-                    <option selected="selected">Sedentary (programmer)</option>
-                    <option>Light (1-3 hours a week)</option>
-                    <option>Moderate (3-5 hours a week)</option>
-                    <option>Intense (a lot of exercise)</option>
-                    <option>Go hard</option>
+                <select id="activity">
+                    <option selected="selected" value="1.2">Sedentary (programmer)</option>
+                    <option value="1.3">Light (1-3 hours a week)</option>
+                    <option value="1.4">Moderate (3-5 hours a week)</option>
+                    <option value="1.5">Intense (a lot of exercise)</option>
+                    <option value="1.6">Go hard</option>
                 </select><br />
                 <br />
                 Enter your desired weight and
                 <br />
                 the month you want it by!<br />
                 Weight:
-                <input type="text" size="10">
+                <input type="text" id="weight2" size="10">
                 <br />
                 Date:
-                <select>
+                <select id="year">
                     <option selected="selected">2013</option>
                     <script>
                         for (var i = 0; i < 100; i++) {
                             document.write("<option>" + (2014 + i) + "</option>");
                         }
-						</script>
+			</script>
                 </select>
-                <select>
-                    <option selected="selected">January</option>
-                    <option>February</option>
-                    <option>March</option>
-                    <option>April</option>
-                    <option>May</option>
-                    <option>June</option>
-                    <option>July</option>
-                    <option>August</option>
-                    <option>September</option>
-                    <option>October</option>
-                    <option>November</option>
-                    <option>December</option>
+                <select id="month">
+                    <option selected="selected" value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
                 </select><br />
                 <br />
                 <button>
@@ -169,7 +205,10 @@
                 <center>
                     <b>How you can achieve it:</b><br />
                     <br />
-                Swag.
+                <p id="mTain">
+		</p>
+		<p id="dailyCal">
+		</p>
             </div>
         </div>
         <div id="mBox">
