@@ -19,7 +19,7 @@
             font-size: 15px;
             font-family: Tahoma;
             width: 300px;
-            height: 600px;
+            height: 550px;
             float: left;
             margin-right: 100px;
             margin-top: 25px;
@@ -52,6 +52,8 @@
             }
         }
         function leanbm(gen, wt, wst) {
+		alert(wt);
+		alert(percent(gen, wt, wst));
             return wt * (1 - percent(gen, wt, wst));
         }
         function calculate() {
