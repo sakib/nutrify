@@ -50,7 +50,7 @@
 				lbm.innerHTML = leanbm(gen, wt, wst).toString();				
 			}	
 			function BMI(wt, ht) {
-				return 703*(wt/(ht^2));
+				return 703*(wt/(ht*ht));
 			}
 			function BMR(gen, age, wt, ht) {
 				if (gen=="male") {
@@ -67,7 +67,7 @@
 				}
 			}
 			function leanbm(gen, wt, wst) {
-				return wt*(1-percent(gen, wt, wst);
+				return wt*(1-percent(gen, wt, wst));
 			}
 		</script>
 	</head>
@@ -92,12 +92,9 @@
 				<div>
 					<center><br/><b>Attributes</b></center><br/>
 					<p id="bmic"></p> <br/>
-<p id="bmrc"></p>
-					 <br/>
-<p id="prc"></p>
-					 <br/>	
-					 <br/>
-<p id="lbm"></p>
+					<p id="bmrc"></p> <br/>
+					<p id="prc"></p> <br/>	
+					<p id="lbm"></p> <br/>
 				</div>
 			</div>
 			<div id="mBox">
