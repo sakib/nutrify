@@ -54,7 +54,7 @@
 		<div id="mainBody">
 			<div id="mBox">
 				<div>
-					<center><br/>Measurements</center><br/>
+					<center><br/><b>Measurements</b></center><br/>
 					<input type="radio" name="sex" value="male"><label style="font-size:15px">Male</label><br/>
 					<input type="radio" name="sex" value="female"><label style="font-size:15px">Female</label><br/>
 					Age:   <input type="text" id="age" size="10"> <br/>
@@ -64,7 +64,7 @@
 					<button type="button" onclick="calculate()">Compile data!</button>
 				</div>
 				<div>
-					<center><br/>Attributes</center><br/>
+					<center><br/><b>Attributes</b></center><br/>
 					swag <br/>
 					swag <br/>
 					swag <br/>	
@@ -73,9 +73,9 @@
 			</div>
 			<div id="mBox">
 				<div>
-					<center><br/>Fitness Goals</center>
+					<center><br/><b>Fitness Goals</b></center>
 					<form>
-						Enter your Activity Level<br/>
+						<br>Enter your Activity Level<br/>
 						<input type="radio" value="1.2">Sedentary (Jack)<br/>
 						<input type="radio" value="1.3">Light (1-3 hours a week)<br/>
 						<input type="radio" value="1.4">Moderate (3-5 hours a week)<br/>
@@ -87,8 +87,8 @@
 					<select>
 						<option selected="selected">2013</option>
 						<script>
-							for (var i = 0; i < 100; i++ ) {
-								document.write("<option>" + (2014+i)+"</option>");
+							for (var i=0; i<100; i++) {
+								document.write("<option>"+(2014+i)+"</option>");
 							}
 						</script>
 					</select>
@@ -114,7 +114,7 @@
 			</div>
 			<div id="mBox">
 				<div>
-					<center><br/>What will I look like?
+					<center><br/><b>What will I look like?</b><br/>
 					<form>
 						<input type="radio" value="1.2">None (Jack)<br/>
 						<input type="radio" value="1.3">Light (1-3 hours a week)<br/>
@@ -148,8 +148,12 @@
 					</select>
 				</div>
 				<div>
-					ENTER GIF HERE PLEASE
 				</div>
+			</div>
+			<div id="mBox">
+				
+				ENTER RESULTING GIF HERE PLEASE
+				
 			</div>
 		</div>			
 	</body>
