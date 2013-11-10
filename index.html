@@ -68,8 +68,8 @@
             var wst = parseFloat(waist.value);
             bmic.innerHTML = "BMI: " + (Math.round(BMI(wt, ht)*10)/10).toString();
             bmrc.innerHTML = "BMR: " + (Math.round(BMR(gen, ag, wt, ht)*10)/10).toString() + " calories";
-            prc.innerHTML = "Body fat %: " + (percent(gen, wt, wst)).toString() + " percent";
-            lbm.innerHTML = "Lean body mass: " + (leanbm(gen, wt, wst)).toString() + " lbs";
+            prc.innerHTML = "Body fat %: " + (Math.round(percent(gen, wt, wst)*10)/10).toString() + " percent";
+            lbm.innerHTML = "Lean body mass: " + (Math.round(leanbm(gen, wt, wst)*10)/10).toString() + " lbs";
         }
 	function getmTain(gen, age, wt, ht, level) {
 		return BMR(gen, age, wt, ht)*level;
