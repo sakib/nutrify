@@ -101,7 +101,7 @@
 		var y2 = parseFloat(year.value);
 		var m2 = document.getElementById('month').value;
 		mTain.innerHTML = "It takes " + (Math.round(getmTain(gen, ag, wt, ht, level)*10)/10).toString() + " calories every day to maintain your weight.";
-		dailyCal.innerHTML = " " + ((Math.round((getmTain(gen, ag, wt, ht, level) + getCal(wt, wt2, m2, y2))*10)/10).toString() + " calories to reach your goal.";
+		dailyCal.innerHTML = "You can change your daily intake to " + ((Math.round((getmTain(gen, ag, wt, ht, level) + getCal(wt, wt2, m2, y2))*10)/10).toString() + " calories to reach your goal.";
 	}
 	</script>
 </head>
