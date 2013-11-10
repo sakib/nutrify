@@ -19,7 +19,7 @@
             font-size: 15px;
             font-family: Tahoma;
             width: 300px;
-            height: 450px;
+            height: 600px;
             float: left;
             margin-right: 100px;
             margin-top: 25px;
@@ -46,9 +46,9 @@
         }
         function percent(gen, wt, wst) {
             if (gen == "male") {
-                return (-98.42 + 4.15 * wst - 0.082 * wt * 100) / wt;
+                return (-98.42 + 4.15 * wst - 0.082 * wt) * 100 / wt;
             } else {
-                return (-76.76 + 4.15 * wst - 0.082 * wt * 100) / wt;
+                return (-76.76 + 4.15 * wst - 0.082 * wt) * 100 / wt;
             }
         }
         function leanbm(gen, wt, wst) {
@@ -100,8 +100,8 @@
 		var level = document.getElementById('activity').value;
 		var y2 = parseFloat(year.value);
 		var m2 = document.getElementById('month').value;
-		mTain.innerHTML = "It takes" + getmTain(gen, ag, wt, ht, level).toString() + "calories every day to maintain your weight.";
-		dailyCal.innerHTML = "You can change your daily intake to " + (getmTain(gen, ag, wt, ht, level) + getCal(wt, wt2, m2, y2)).toString() + "calories to reach your goal.";
+		mTain.innerHTML = "It takes " + getmTain(gen, ag, wt, ht, level).toString() + " calories every day to maintain your weight.";
+		dailyCal.innerHTML = "You can change your daily intake to " + (getmTain(gen, ag, wt, ht, level) + getCal(wt, wt2, m2, y2)).toString() + " calories to reach your goal.";
 	}
 	</script>
 </head>
