@@ -66,7 +66,7 @@
             var wt = parseFloat(weight.value);
             var ht = parseFloat(height.value);
             var wst = parseFloat(waist.value);
-            bmic.innerHTML = "BMI: " + BMI(wt, ht).toString();
+            bmic.innerHTML = "BMI: " + (Math.round(BMI(wt, ht)*10)/10).toString();
             bmrc.innerHTML = "BMR: " + BMR(gen, ag, wt, ht).toString() + " calories";
             prc.innerHTML = "Body fat %: " + percent(gen, wt, wst).toString() + " percent";
             lbm.innerHTML = "Lean body mass: " + leanbm(gen, wt, wst).toString() + " lbs";
