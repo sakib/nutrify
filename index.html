@@ -32,20 +32,22 @@
 
 	<title>Nutrify</title>
 	
-	<script>
-		function calculate() {
-			var gender = true;
-			if (document.getElementById("male").checked=false) {
-				gender = false;
-			var a = parseFloat(age.value);
-			var h = parseFloat(height.value);
-			var w = parseFloat(waist.value);
-			var t = parseFloat(weight.value);
-			alert(a);
-			return { "gender" : gender } ; 
-		}	
+	<head>
+		<script>
+			function calculate() {
+				var gender = true;
+				if (document.getElementById("male").checked=false) {
+					gender = false;
+				var a = parseFloat(age.value);
+				var h = parseFloat(height.value);
+				var w = parseFloat(waist.value);
+				var t = parseFloat(weight.value);
+				alert("hello world!");
+				return { "gender" : gender } ; 
+			}	
 	
-	</script>
+		</script>
+	</head>
 
 	<body>
 		<p>
@@ -63,7 +65,7 @@
 					Weight:<input type="text" id="weight" size="10"> <br/>
 					Height:<input type="text" id="height" size="10"> <br/>
 					Waist: <input type="text" id="waist" size="10"> <br/><br/>	
-					<button type="button" onclick="calculate()">Compile!</button>
+					<button onclick="calculate()">Compile!</button>
 				</div>
 				<div>
 					<center><br/><b>Attributes</b></center><br/>
@@ -109,7 +111,7 @@
 						<option>November</option>
 						<option>December</option>
 					</select><br/><br/>
-					<button type="button">Compile!</button>
+					<button>Compile!</button>
 				</div>
 				<div>	
 					<br/><center><b>How you can achieve it:</b><br/><br/>
@@ -151,7 +153,7 @@
 						<option>November</option>
 						<option>December</option>
 					</select><br/><br/>
-					<button type="button">Generate model!</button>
+					<button>Generate model!</button>
 				</div>
 				<div>
 				</div>
