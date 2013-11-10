@@ -44,9 +44,31 @@
 				var wt = parseFloat(weight.value);
 				var ht = parseFloat(height.value);
 				var wst = parseFloat(waist.value);
-				var output = [gen, age, wt, ht, wst];
-				return output;
+				bmic.innnerHTML = BMI(wt,ht).toString();
+				bmrc.innerHTML = BMR(gen,age,wt,ht).toString();
+				prc.innerHTML = percent(gen,wt,wst).toString();
+				lbm.innerHTML = leanbm(gen, wt, wst).toString();				
 			}	
+			function BMI(wt, ht) {
+				return 703*(wt/(ht^2));
+			}
+			function BMR(gen, age, wt, ht) {
+				if (gen=="male") {
+					return 66+(6.23*wt)+(12.7*ht)-(6.8*age);
+				} else {
+					return 655+(4.35*wt)+(4.7*ht)-(4.7*age);
+				}
+			}
+			function percent(gen, wt, wst) {
+				if (gen=="male") {
+					return (-98.42+4.15*wst-0.082*wt)/wt;
+				} else {
+					return (-76.76+4.15*wst-0.082*wt)/wt;
+				}
+			}
+			function leanbm(gen, wt, wst) {
+				return wt*(1-percent(gen, wt, wst);
+			}
 		</script>
 	</head>
 
@@ -69,10 +91,13 @@
 				</div>
 				<div>
 					<center><br/><b>Attributes</b></center><br/>
-					swag <br/>
-					swag <br/>
-					swag <br/>	
-					swag <br/>
+					<p id="bmic"></p> <br/>
+<p id="bmrc"></p>
+					 <br/>
+<p id="prc"></p>
+					 <br/>	
+					 <br/>
+<p id="lbm"></p>
 				</div>
 			</div>
 			<div id="mBox">
