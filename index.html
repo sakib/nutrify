@@ -46,9 +46,9 @@
         }
         function percent(gen, wt, wst) {
             if (gen == "male") {
-                return (-98.42 + 4.15 * wst - 0.082 * wt) / wt;
+                return (-98.42 + 4.15 * wst - 0.082 * wt * 100) / wt;
             } else {
-                return (-76.76 + 4.15 * wst - 0.082 * wt) / wt;
+                return (-76.76 + 4.15 * wst - 0.082 * wt * 100) / wt;
             }
         }
         function leanbm(gen, wt, wst) {
@@ -138,13 +138,13 @@
                     <br />
                     <b>Attributes</b></center>
                 <br />
-                <p id="bmic">
+                BMI: <p id="bmic">
                 </p>
-                <p id="bmrc">
+                BMR: <p id="bmrc">
                 </p>
-                <p id="prc">
+                Body fat %: <p id="prc">
                 </p>
-                <p id="lbm">
+                Lean body mass: <p id="lbm">
                 </p>
             </div>
         </div>
@@ -201,9 +201,9 @@
                 <center>
                     <b>How you can achieve it:</b><br />
                     <br />
-                <p id="mTain">
+                It takes <p id="mTain"> calories every day to maintain your weight.
 		</p>
-		<p id="dailyCal">
+		You can change your intake to <p id="dailyCal"> over this period of time to reach your goal weight.
 		</p>
             </div>
         </div>
