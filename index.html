@@ -40,12 +40,12 @@
 				if (document.getElementById('r2').checked) {
 					gen = document.getElementById('r2').value;	
 				}
-				alert(gen);
 				var age = parseFloat(age.value);
 				var wt = parseFloat(weight.value);
 				var ht = parseFloat(height.value);
 				var wst = parseFloat(waist.value);
-				var output = [];
+				var output = [gen, age, wt, ht, wst];
+				return output;
 			}	
 		</script>
 	</head>
@@ -69,7 +69,10 @@
 				</div>
 				<div>
 					<center><br/><b>Attributes</b></center><br/>
-					"height" * 1<br/>
+					<script>
+						alert(calculate().[0]);
+					</script>
+					swag <br/>
 					swag <br/>
 					swag <br/>	
 					swag <br/>
