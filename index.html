@@ -79,6 +79,7 @@
 		var monthDiff = m2-11;
 		var dayDiff = (monthDiff*30) + (yearDiff*365);
 		var changeCal = (wt2-wt)*3500;
+		alert(dayDiff); alert(changeCal);
 		return (changeCal/dayDiff)+BMR(gen, age, wt, ht, level);
 	}
 	function calculate2() {
@@ -89,7 +90,6 @@
 		if (document.getElementById('r2').checked) {
 			gen = document.getElementById('r2').value;
 		}
-		alert(gen);
 		var ag = parseFloat(age.value);
 		var ht = parseFloat(height.value);
 		var wst = parseFloat(waist.value);
