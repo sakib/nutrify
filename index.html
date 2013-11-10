@@ -74,7 +74,7 @@
 	function getmTain(gen, age, wt, ht, level) {
 		return BMR(gen, age, wt, ht)*level;
 	}
-	function getCal(wt, wt2, m2, y2, gen, age, ht, level) {
+	function getCal(wt, wt2, m2, y2) {
 		var yearDiff = y2-2013;
 		var monthDiff = m2-11;
 		if (monthDiff < 0) {
@@ -82,9 +82,7 @@
 		}
 		var dayDiff = (monthDiff*30) + (yearDiff*365);
 		var changeCal = (wt2-wt)*3500;
-		alert (changeCal/dayDiff);
-		alert (getmTain(gen, age, wt, ht, level));
-		return (changeCal/dayDiff)+getmTain(gen, age, wt, ht, level);
+		return (changeCal/dayDiff);
 	}
 	function calculate2() {
 		var gen;
@@ -103,7 +101,7 @@
 		var y2 = parseFloat(year.value);
 		var m2 = document.getElementById('month').value;
 		mTain.innerHTML = getmTain(gen, ag, wt, ht, level).toString();
-		dailyCal.innerHTML = getCal(wt, wt2, m2, y2, gen, ag, wt, ht, level).toString();
+		dailyCal.innerHTML = (getmTain(gen, ag, wt, ht, level) + getCal(wt, wt2, m2, y2)).toString();
 	}
 	</script>
 </head>
