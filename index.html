@@ -96,20 +96,10 @@
 		var wt = parseFloat(weight.value);
 		var wt2 = parseFloat(weight2.value);
 		var level = document.getElementById('activity').value;
-		//var level = [];
-		//for ( var i=0, j=opts.length; i<j; i++ ) {
-		//	level.push(opts[i].value);
-		//}
 		var y2 = parseFloat(year.value) - 2013;
 		var m2 = document.getElementById('month').value;
-		//var m2 = [];
-		//for ( var i=0, j=months.value; i<j; i++ ) {
-		//	m2.push(months[i].value);
-		//}
-		alert(gen); alert(ag); alert(wt); alert(ht); alert(level);
 		mTain.innerHTML = getmTain(gen, ag, wt, ht, level).toString();
 		dailyCal.innerHTML = getCal(wt, wt2, m2, y2, gen, ag, wt, ht, level).toString();
-		alert(mTain); alert(dailyCal);
 	}
 	</script>
 </head>
