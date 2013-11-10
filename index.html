@@ -35,6 +35,7 @@
 	<head>
 		<script>
 			function calculate() {
+				alert("hello world!");
 				var gender = true;
 				if (document.getElementById("male").checked=false) {
 					gender = false;
@@ -42,8 +43,6 @@
 				var h = parseFloat(height.value);
 				var w = parseFloat(waist.value);
 				var t = parseFloat(weight.value);
-				alert("hello world!");
-				return { "gender" : gender } ; 
 			}	
 	
 		</script>
