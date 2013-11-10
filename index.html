@@ -77,9 +77,12 @@
 	function getCal(wt, wt2, m2, y2, gen, age, ht, level) {
 		var yearDiff = y2-2013;
 		var monthDiff = m2-11;
+		if (monthDiff < 0) {
+			monthDiff+=12;
+		}
 		var dayDiff = (monthDiff*30) + (yearDiff*365);
 		var changeCal = (wt2-wt)*3500;
-		alert(y2); alert(dayDiff); alert(monthDiff); alert(yearDiff);
+		alert(yearDiff); alert(y2);
 		return (changeCal/dayDiff)+BMR(gen, age, wt, ht, level);
 	}
 	function calculate2() {
