@@ -67,9 +67,9 @@
             var ht = parseFloat(height.value);
             var wst = parseFloat(waist.value);
             bmic.innerHTML = "BMI: " + (Math.round(BMI(wt, ht)*10)/10).toString();
-            bmrc.innerHTML = "BMR: " + BMR(gen, ag, wt, ht).toString() + " calories";
-            prc.innerHTML = "Body fat %: " + percent(gen, wt, wst).toString() + " percent";
-            lbm.innerHTML = "Lean body mass: " + leanbm(gen, wt, wst).toString() + " lbs";
+            bmrc.innerHTML = "BMR: " + (Math.round(BMR(gen, ag, wt, ht)*10)/10).toString() + " calories";
+            prc.innerHTML = "Body fat %: " + (Math.round(percent(gen, wt, wst)*10)/10).toString() + " percent";
+            lbm.innerHTML = "Lean body mass: " + (Math.round(leanbm(gen, wt, wst)*10)/10).toString() + " lbs";
         }
 	function getmTain(gen, age, wt, ht, level) {
 		return BMR(gen, age, wt, ht)*level;
@@ -100,8 +100,8 @@
 		var level = document.getElementById('activity').value;
 		var y2 = parseFloat(year.value);
 		var m2 = document.getElementById('month').value;
-		mTain.innerHTML = "It takes " + getmTain(gen, ag, wt, ht, level).toString() + " calories every day to maintain your weight.";
-		dailyCal.innerHTML = "You can change your daily intake to " + (getmTain(gen, ag, wt, ht, level) + getCal(wt, wt2, m2, y2)).toString() + " calories to reach your goal.";
+		mTain.innerHTML = "It takes " + (Math.round(getmTain(gen, ag, wt, ht, level)*10)/10).toString() + " calories every day to maintain your weight.";
+		dailyCal.innerHTML = " " + ((Math.round((getmTain(gen, ag, wt, ht, level) + getCal(wt, wt2, m2, y2))*10)/10).toString() + " calories to reach your goal.";
 	}
 	</script>
 </head>
