@@ -66,10 +66,10 @@
             var wt = parseFloat(weight.value);
             var ht = parseFloat(height.value);
             var wst = parseFloat(waist.value);
-            bmic.innerHTML = BMI(wt, ht).toString();
-            bmrc.innerHTML = BMR(gen, ag, wt, ht).toString();
-            prc.innerHTML = percent(gen, wt, wst).toString();
-            lbm.innerHTML = leanbm(gen, wt, wst).toString();
+            bmic.innerHTML = "BMI: " + BMI(wt, ht).toString();
+            bmrc.innerHTML = "BMR: " + BMR(gen, ag, wt, ht).toString();
+            prc.innerHTML = "Body fat %: " + percent(gen, wt, wst).toString();
+            lbm.innerHTML = "Lean body mass: " + leanbm(gen, wt, wst).toString();
         }
 	function getmTain(gen, age, wt, ht, level) {
 		return BMR(gen, age, wt, ht)*level;
@@ -100,8 +100,8 @@
 		var level = document.getElementById('activity').value;
 		var y2 = parseFloat(year.value);
 		var m2 = document.getElementById('month').value;
-		mTain.innerHTML = getmTain(gen, ag, wt, ht, level).toString();
-		dailyCal.innerHTML = (getmTain(gen, ag, wt, ht, level) + getCal(wt, wt2, m2, y2)).toString();
+		mTain.innerHTML = "It takes" + getmTain(gen, ag, wt, ht, level).toString() + "calories every day to maintain your weight.";
+		dailyCal.innerHTML = "You can change your daily intake to " + (getmTain(gen, ag, wt, ht, level) + getCal(wt, wt2, m2, y2)).toString() + "calories to reach your goal.";
 	}
 	</script>
 </head>
@@ -138,13 +138,13 @@
                     <br />
                     <b>Attributes</b></center>
                 <br />
-                BMI: <p id="bmic">
+                <p id="bmic">
                 </p>
-                BMR: <p id="bmrc">
+                <p id="bmrc">
                 </p>
-                Body fat %: <p id="prc">
+                <p id="prc">
                 </p>
-                Lean body mass: <p id="lbm">
+                <p id="lbm">
                 </p>
             </div>
         </div>
@@ -201,9 +201,9 @@
                 <center>
                     <b>How you can achieve it:</b><br />
                     <br />
-                It takes <p id="mTain"> calories every day to maintain your weight.
+                <p id="mTain">
 		</p>
-		You can change your intake to <p id="dailyCal"> over this period of time to reach your goal weight.
+		<p id="dailyCal">
 		</p>
             </div>
         </div>
