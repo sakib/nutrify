@@ -1,2 +1,0 @@
-sudo su samjalal
-cd /home/samjalal/public/sameenjalal.com/sakib/nutrify
